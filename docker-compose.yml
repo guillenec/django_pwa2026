@@ -1,6 +1,7 @@
 services:
   backend:
     image: django-tp1:0.1
+    user: "${UID:-1000}:${GID:-1000}"
     build: 
       context: ./config/django-image
     volumes:
